@@ -20,3 +20,13 @@ python run_pipeline.py --config examples/pipeline.json --output generated
 
 - `nodes` 中包含 data/model/train/eval 四类节点，每个节点包含 `params`。
 - `edges` 目前用于描述节点关系，后续可用于图结构执行。
+
+## 前端 UI 原型
+
+仓库提供一个纯前端的 MVP 画布，支持拖拽节点、编辑参数并导出 JSON。
+
+```bash
+python -m http.server 8000 --directory web
+```
+
+浏览器访问 `http://localhost:8000` 即可体验。
