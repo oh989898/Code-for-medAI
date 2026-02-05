@@ -14,6 +14,10 @@
 │   ├── sam
 │   ├── titan
 │   └── clip
+├── scripts
+│   └── run_notebook_smoke.py
+├── tests
+│   └── test_notebook_smoke.py
 └── README.md
 ```
 
@@ -49,6 +53,23 @@ pip install --upgrade pip
 
 ```bash
 jupyter notebook notebooks/01_sam_medical_segmentation.ipynb
+```
+
+## ✅ 教程冒烟测试（确保基础流程能跑通）
+
+我们为每个 Notebook 提供了**不依赖大模型权重**的“冒烟测试”单元，
+可以用来快速验证你的环境可运行核心流程：
+
+```bash
+python scripts/run_notebook_smoke.py notebooks/01_sam_medical_segmentation.ipynb
+python scripts/run_notebook_smoke.py notebooks/02_titan_pathology.ipynb
+python scripts/run_notebook_smoke.py notebooks/03_clip_multimodal.ipynb
+```
+
+也可以运行测试用例：
+
+```bash
+python -m pytest
 ```
 
 ## 🧭 推荐学习顺序
