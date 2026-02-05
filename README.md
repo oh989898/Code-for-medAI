@@ -30,3 +30,7 @@ python -m http.server 8000 --directory web
 ```
 
 浏览器访问 `http://localhost:8000` 即可体验。
+
+## 教程
+
+- [医学多模态 CLIP 教学（新手友好版）](tutorials/clip_medical_tutorial.ipynb)
